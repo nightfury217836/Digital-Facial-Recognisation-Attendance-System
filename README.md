@@ -1,9 +1,8 @@
 # Digital-Facial-Recognisation-Attendance-System
 
-
 The Digital Facial Recognition Attendance System is an advanced, automated system designed to track and manage attendance efficiently using facial recognition technology. Unlike traditional attendance methods (manual registers or RFID cards), this system uses computer vision and AI to identify individuals in real-time, ensuring accuracy, security, and time-saving management.
 
-Key Features:
+# Key Features:
 
 Facial Recognition: Utilizes AI and deep learning algorithms to detect and recognize faces in real-time. Each person is uniquely identified to prevent proxy attendance.
 
@@ -21,7 +20,7 @@ GUI Dashboard: Interactive and user-friendly dashboard for admins and teachers t
 
 Optional Notifications: Can be integrated with email or SMS alerts to notify users about their attendance status.
 
-Applications:
+# Applications:
 
 Schools, colleges, and universities for student attendance.
 
@@ -39,7 +38,7 @@ GUI: Tkinter / Web-based dashboard
 
 Optional Integration: Email/SMS APIs for notifications
 
-Benefits:
+# Benefits:
 
 Reduces manual effort and paperwork
 
