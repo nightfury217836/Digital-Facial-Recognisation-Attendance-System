@@ -21,13 +21,19 @@ Interactive Dashboard 🖥️📋: Easy-to-use admin interface.
 Notifications ✉️📱: Alerts via email/SMS about attendance.
 
 Applications:
+
 🏫 Schools & Colleges | 🏢 Offices | 🏋️ Workshops & Seminars
 
 Tech Stack: 🛠️
+
 Python 🐍, OpenCV 📷, Dlib, Face Recognition, Flask 🌐, SQLite/MySQL 💾
 
 Benefits:
+
 ✅ Save time & effort
+
 ✅ Accurate & fraud-proof
+
 ✅ Real-time insights
+
 ✅ Scalable & efficient
