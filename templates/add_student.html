@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Add Student</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+<div class="container my-4">
+  <div class="row justify-content-center">
+    <div class="col-md-8">
+      <div class="card p-4 shadow-sm">
+        <h4 class="mb-3">Add Student & Capture Faces</h4>
+
+        <form id="studentForm">
+          <div class="row g-2">
+            <div class="col-md-6"><input class="form-control" name="name" placeholder="Full Name" required></div>
+            <div class="col-md-3"><input class="form-control" name="roll" placeholder="Roll"></div>
+            <div class="col-md-3"><input class="form-control" name="reg_no" placeholder="Registration No"></div>
+            <div class="col-md-6"><input class="form-control" name="class" placeholder="Class"></div>
+            <div class="col-md-6"><input class="form-control" name="sec" placeholder="Section"></div>
+          </div>
+          <div class="mt-3 d-flex gap-2">
+            <button id="saveInfoBtn" type="submit" class="btn btn-primary">Save Info</button>
+            <button id="startCaptureBtn" type="button" class="btn btn-warning" disabled>Start Capture (50)</button>
+            <button id="addStudentBtn" type="button" class="btn btn-success" disabled>Add Student</button>
+          </div>
+        </form>
+
+        <hr>
+
+        <div class="text-center">
+          <video id="video" width="560" height="420" autoplay muted style="border-radius:10px;border:2px solid #e2e8f0;"></video>
+          <div class="mt-2">
+            <div id="captureStatus" class="small text-muted">Captured 0 / 50</div>
+            <div class="progress mt-1" style="height:12px;">
+              <div id="progressBar" class="progress-bar bg-success" style="width:0%"></div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="{{ url_for('static', filename='js/camera_add_student.js') }}"></script>
+</body>
+</html>

@@ -1,0 +1,155 @@
+/* =========================
+   Global Styles
+   ========================= */
+html, body {
+  height: 100%;
+  margin: 0;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: url('static/images/bg.png') no-repeat center center fixed;
+  background-size: contain;
+  margin: 0;
+  color: #1e293b;
+  display: flex;                     /* right-side alignment */
+  justify-content: flex-end;
+  align-items: flex-start;
+  padding: 2rem;                      /* spacing around the panel */
+}
+
+/* Optional overlay if background is busy */
+
+ body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  background: rgba(255,255,255,0.4);
+  z-index: -1;
+} 
+
+h5, h4, h3 {
+  font-weight: 600;
+}
+
+/* =========================
+   Right Panel Wrapper
+   ========================= */
+.right-panel {
+  width: 420px;                       /* fixed column width */
+  max-width: 90vw;
+  background: rgba(255, 255, 255, 0.92);
+  border-radius: 1rem;
+  padding: 2rem 1.5rem;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+  overflow-y: auto;                   /* scroll if content grows */
+}
+
+/* Keep Bootstrap rows/cards inside panel tidy */
+.right-panel .row {
+  margin: 0;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;                         /* spacing between cards */
+}
+
+.right-panel .col-lg-4,
+.right-panel .col-lg-8 {
+  flex: 0 0 auto;         /* stop Bootstrap from auto-stretching */
+  max-width: none;        /* remove the percentage width constraint */
+}
+
+/* =========================
+   Card Styles
+   ========================= */
+.card {
+  border: none;
+  border-radius: 1rem;
+  background: rgba(255, 255, 255, 0.96);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+}
+
+.card h5 {
+  color: #0f172a;
+}
+
+.card .btn {
+  border-radius: 0.6rem;
+  font-weight: 500;
+  transition: background-color 0.2s ease;
+}
+
+.card .btn-primary:hover,
+.card .btn-success:hover,
+.card .btn-warning:hover {
+  filter: brightness(0.95);
+}
+
+/* =========================
+   Progress Bar & Chart
+   ========================= */
+.progress {
+  background-color: #e2e8f0;
+  border-radius: 1rem;
+}
+
+.progress-bar {
+  background: linear-gradient(90deg, #3b82f6, #2563eb);
+  font-weight: 600;
+  border-radius: 1rem;
+}
+
+#attendanceChart {
+  max-height: 320px;
+}
+
+/* =========================
+   Navbar & Utilities
+   ========================= */
+.navbar {
+  box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+}
+
+.navbar-brand {
+  font-size: 1.4rem;
+  letter-spacing: 0.5px;
+}
+
+.btn-outline-light {
+  border-radius: 0.5rem;
+  transition: all 0.2s ease;
+}
+
+.btn-outline-light:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+  color: #fff;
+}
+
+.text-muted {
+  color: #64748b !important;
+}
+
+.shadow-sm {
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08) !important;
+}
+
+/* =========================
+   Responsive
+   ========================= */
+@media (max-width: 768px) {
+  body {
+    justify-content: center;          /* center on small screens */
+    padding: 1rem;
+  }
+  .right-panel {
+    width: 100%;
+    max-width: 500px;
+  }
+}

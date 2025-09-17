@@ -1,0 +1,34 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8"/><meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>Mark Attendance</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+<div class="container my-4">
+  <div class="card p-4 shadow-sm">
+    <div class="d-flex justify-content-between align-items-center">
+      <h4>Mark Attendance (Live)</h4>
+      <div>
+        <button id="startMarkBtn" class="btn btn-primary">Start</button>
+        <button id="stopMarkBtn" class="btn btn-danger" disabled>Stop</button>
+      </div>
+    </div>
+
+    <div class="row mt-3">
+      <div class="col-md-7 text-center">
+        <video id="markVideo" width="560" height="420" autoplay muted style="border-radius:10px;border:2px solid #e2e8f0;"></video>
+        <div id="markStatus" class="mt-2 small text-muted">Waiting...</div>
+      </div>
+      <div class="col-md-5">
+        <h6>Recognized (session)</h6>
+        <ul id="recognizedList" class="list-group"></ul>
+      </div>
+    </div>
+  </div>
+</div>
+<script src="{{ url_for('static', filename='js/camera_mark.js') }}"></script>
+</body>
+</html>
