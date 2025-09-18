@@ -1,0 +1,40 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8"/><meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>Attendance Records</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+<div class="container my-4">
+  <div class="d-flex justify-content-between align-items-center mb-3">
+    <h4>Attendance Records</h4>
+    <div>
+      <a class="btn btn-outline-primary" href="/download_csv">Download CSV</a>
+      <a class="btn btn-outline-secondary" href="/">Back</a>
+    </div>
+  </div>
+
+  <div class="mb-3">
+    <a href="/attendance_record?period=all" class="btn btn-sm btn-light">All</a>
+    <a href="/attendance_record?period=daily" class="btn btn-sm btn-light">Daily</a>
+    <a href="/attendance_record?period=weekly" class="btn btn-sm btn-light">Weekly</a>
+    <a href="/attendance_record?period=monthly" class="btn btn-sm btn-light">Monthly</a>
+  </div>
+
+  <div class="table-responsive">
+    <table class="table table-striped">
+      <thead class="table-dark">
+        <tr><th>ID</th><th>Student ID</th><th>Name</th><th>Timestamp (UTC)</th></tr>
+      </thead>
+      <tbody>
+      {% for r in records %}
+        <tr><td>{{ r[0] }}</td><td>{{ r[1] }}</td><td>{{ r[2] }}</td><td>{{ r[3] }}</td></tr>
+      {% endfor %}
+      </tbody>
+    </table>
+  </div>
+</div>
+</body>
+</html>
